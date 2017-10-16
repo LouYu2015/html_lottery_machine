@@ -1,0 +1,250 @@
+/*
+MIT License
+
+Copyright (c) 2017 Yu Lou
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+/* ====== Global ====== */
+
+body
+{
+	margin: 0;
+
+	background-image: url("background.jpeg");
+	background-size: cover;
+	background-attachment: fixed;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+div.section, div.footer
+{
+
+	margin: 3vw 8vw;
+	border: None;
+	border-radius: 4vw;
+	padding: 5vw 10vw;
+
+	background-image: url("background_blur.jpeg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+div.footer
+{
+	width: 100%;
+	margin: 6vw 0 0 0;
+	border-radius: 0;
+	padding: 1vw 0;
+	text-align: center;
+}
+
+div.footer p
+{
+	font-size: 2.5vw;
+	margin: 1vw 0;
+}
+
+div.dynamic /* For sections that have animated height */
+{
+	transition-property: height;
+	transition-duration: 0.5s;
+
+	height: 0px;
+	overflow: hidden;
+}
+
+#MIT_license
+{
+	overflow-x: auto;
+	border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+/* ====== Link ====== */
+
+a
+{
+	color: rgba(32, 64, 128, 1);
+}
+
+/* ====== Button ====== */
+
+button
+{
+	margin: 1vw;
+	border: none;
+	border-radius: 10vw;
+	outline: none;
+	padding: 1.5vw 2.5vw;
+
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+
+	font-size: 2vw;
+	color: white;
+	text-shadow: 0.1vw 0.1vw 0 gray;
+}
+
+button:focus
+{
+	box-shadow: 0 0 1vw rgba(32, 128, 255, 1);
+}
+
+button.danger
+{
+	background-color: #FF4351;
+}
+
+button.danger:hover
+{
+	background-color: #FF7680;
+	box-shadow: 0 0 1vw #FF7680;
+}
+
+button.normal
+{
+	background-color: #00C066;
+}
+
+button.normal:hover
+{
+	background-color: #40E0A0;
+	box-shadow: 0 0 1vw #40E0A0;
+}
+
+button.circle
+{
+	width: 4vw;
+	height: 4vw;
+
+	margin-top: 0;
+	margin-bottom: 0;
+	border-radius: 100vw;
+	padding: 0.5vw;
+
+	font-size: 2.5vw;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+
+	display: inline-block;
+}
+
+/* ====== Lottery area ====== */
+#lottery_number_div
+{
+	margin-bottom: 6vw;
+}
+
+#lottery_number_div, #history_div
+{
+	box-sizing: border-box;
+	padding: 0px -15px;
+
+	font-size: 5vw;
+	text-align: center;
+	overflow:hidden;
+}
+
+#lottery_number_div p, #history_div p
+{
+	margin: 1vw 15px;
+	width: calc(50% - 30px);
+	float: left;
+	line-height: 7vw;
+	vertical-align: middle;
+}
+
+#lottery_number_div span, #history_div span
+{
+	display: inline-block;
+	width: 15vw;
+}
+
+.button_area p
+{
+	margin: 2vw;
+}
+
+/* ====== Text box ====== */
+
+input[type="textbox"] {
+    height: 5vw;
+    width: 20vw;
+
+    margin: 1vw;
+
+    border: 1px solid rgba(64, 64, 64, 0.25);
+    border-radius: 1vw;
+	outline: none;
+
+	background-color: rgba(255, 255, 255, 0);
+
+	font-size: 4vw;
+	text-align: center;
+
+	transition-property: border, box-shadow, background-color;
+	transition-duration: 0.5s;
+}
+
+input[type="textbox"]:hover {
+	border: 1px solid rgba(32, 128, 255, 0.5);
+	transition-duration: 1s;
+}
+
+input[type="textbox"]:focus {
+	border: 1px solid rgba(64, 64, 64, 0);
+	/*
+	border: 1px solid #2080FF;
+	box-shadow: 0 0 2vw #2080FF;
+	*/
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ====== Settings area ====== */
+
+#settings_interface
+{
+	font-size: 3vw;
+}
+
+#settings_interface h1
+{
+	font-size: 5vw;
+}
+
+#prompt p{
+	margin: 0;
+
+	text-shadow: 0.1vw 0.1vw 0 gray;
+}
+
+@media(max-width: 450px) {
+	#lottery_number_div p, #history_div p{
+		margin: 1vw 5px;
+		width: calc(50% - 10px)
+	}
+
+	button
+	{
+		margin: 0.5vw;
+	}
+}

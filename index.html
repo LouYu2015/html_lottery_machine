@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lottery Machine</title>
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+	<div id="main_interface">
+			<div id="lottery_area" class="section">
+				<div id="lottery_number" class="dynamic">
+					<div id="lottery_number_measure">
+						<div id="lottery_number_div">
+								<div>Press Start</div>
+						</div>
+					</div>
+				</div>
+				<div class="button_area">
+					<p>
+						<button class="normal" onclick="on_start_button()">Start</button>
+						<button class="normal" onclick="on_stop_button()">Stop</button>
+						<button class="danger" onclick="on_clear_button()">Clear</button>
+						<button class="normal" onclick="swith_to_interface('settings_interface')">Settings</button>
+					</p>
+					<p>
+						<button class="normal" onclick="on_save_history_button()">Save to history</button>
+						<button class="danger" onclick="on_clear_history_button()">Clear history</button>
+					</p>
+				</div>
+			</div>
+			<div id="history_area" class="section dynamic">
+				<div id="history_area_measure">
+					<div id="history_div">
+						<div>History is empty</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<div id="settings_interface" class="section dynamic">
+		<div id="settings_interface_measure">
+			<h1>Settings</h1>
+			<div id="prompt" class="dynamic">
+				<div id="prompt_measure">
+				</div>
+			</div>
+			<div id="settings_interface">
+				<p><span>Minimum number:</span><input type="textbox" id="input_min_number"></p>
+				<p><span>Maximun number:</span><input type="textbox" id="input_max_number"></p>
+				<p><span>Number of numbers:</span><input type="textbox" id="input_number_of_lotteries"></p>
+			</div>
+			<div class="button_area">
+				<button class="normal" onclick="swith_to_interface('main_interface')">Back</button>
+				<button class="normal" onclick="on_save_button()">Save</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="copyright_interface" class="section dynamic">
+		<div id="copyright_interface_measure">
+			<div id="MIT_license">
+				<pre>MIT License
+
+Copyright (c) 2017 Yu Lou
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+				</pre>
+			</div>
+			<p>
+				<a href="https://www.pexels.com/photo/background-blur-bokeh-bright-220067/">Background image</a>
+				is licensed under <a href="https://www.pexels.com/photo-license/">CC0 license</a>.
+			</p>
+			<p>
+				<a href="https://fonts.google.com/specimen/Roboto">Font</a>
+				is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+			</p>
+			<div class="button_area">
+				<button class="normal" onclick="swith_to_interface('main_interface')">Back</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>
+			Copyright © 2017 Yu Lou
+			<a onclick="swith_to_interface('copyright_interface')">MIT License</a>
+		</p>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
