@@ -192,7 +192,7 @@ input[type="textbox"] {
 
     margin: 1vw;
 
-    border: 1px solid rgba(64, 64, 64, 0.25);
+    border: 0.15vw solid rgba(64, 64, 64, 0.25);
     border-radius: 1vw;
 	outline: none;
 
@@ -206,16 +206,12 @@ input[type="textbox"] {
 }
 
 input[type="textbox"]:hover {
-	border: 1px solid rgba(32, 128, 255, 0.5);
+	border: 0.15vw solid rgba(32, 128, 255, 0.5);
 	transition-duration: 1s;
 }
 
 input[type="textbox"]:focus {
-	border: 1px solid rgba(64, 64, 64, 0);
-	/*
-	border: 1px solid #2080FF;
-	box-shadow: 0 0 2vw #2080FF;
-	*/
+	border: 0.15vw solid rgba(64, 64, 64, 0);
 	background-color: rgba(255, 255, 255, 0.25);
 }
 
