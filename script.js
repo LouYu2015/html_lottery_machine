@@ -234,14 +234,14 @@ function on_save_button()
 function show_prompt()
 {
 	document.getElementById("prompt_measure").innerHTML = "<p>Settings Saved</p>";
-	growDiv("prompt");
+	adjust_height_for("prompt");
 	setTimeout("hide_prompt()", prompt_timeout);
 }
 
 function hide_prompt()
 {
 	document.getElementById("prompt_measure").innerHTML = "";
-	growDiv("prompt");
+	adjust_height_for("prompt");
 }
 
 /* ====== Main ====== */
