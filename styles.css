@@ -33,8 +33,10 @@ body
 {
 	position: relative;
 	min-height: 100%;
+	box-sizing: border-box;
 
 	margin: 0;
+	padding-top: 3vw;
 	padding-bottom: 8vw;
 
 	background-image: url("background.jpeg");
@@ -47,7 +49,7 @@ body
 div.section, div.footer
 {
 
-	margin: 3vw 8vw;
+	margin: 0 8vw 3vw 8vw;
 	border: None;
 	border-radius: 4vw;
 	padding: 5vw 10vw;
