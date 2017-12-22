@@ -24,9 +24,18 @@ SOFTWARE.
 
 /* ====== Global ====== */
 
+html
+{
+	height: 100%;
+}
+
 body
 {
+	position: relative;
+	min-height: 100%;
+
 	margin: 0;
+	padding-bottom: 8vw;
 
 	background-image: url("background.jpeg");
 	background-size: cover;
@@ -50,7 +59,10 @@ div.section, div.footer
 
 div.footer
 {
-	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	margin: 6vw 0 0 0;
 	border-radius: 0;
 	padding: 1vw 0;
